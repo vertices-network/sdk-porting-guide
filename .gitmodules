@@ -1,0 +1,3 @@
+[submodule "external/c-vertices-sdk"]
+	path = external/c-vertices-sdk
+	url = https://github.com/vertices-network/c-vertices-sdk
