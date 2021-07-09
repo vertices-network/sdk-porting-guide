@@ -4,6 +4,7 @@ project(${PROJECT_NAME})
 # add source file related to that project
 set(SRC_FILES
         main.c
+        http_template.c
         )
 
 # Add directories to include below

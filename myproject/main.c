@@ -28,5 +28,20 @@ int main(int argc, char *argv[])
     ret_code_t err_code = vertices_new(&vertex);
     VTC_ASSERT(err_code);
 
+    // ping provider
+    err_code = vertices_ping();
+    VTC_ASSERT(err_code);
+
+    // get provider version
+    provider_version_t version = {0};
+    err_code = vertices_version(&version);
+    VTC_ASSERT(err_code);
+
+    printf("🏎 Running on %s v.%u.%u.%u\n",
+             version.network,
+             version.major,
+             version.minor,
+             version.patch);
+
     return 0;
 }
